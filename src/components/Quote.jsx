@@ -19,7 +19,10 @@ const Quote = () => {
                 return response.json();
             })
             .then((data) => {
-                setQuote(`"${data.en}" - ${data.author}`);
+                const quoteText = data.quote || 'Quote text not available';
+                const author = data.author || 'Unknown Author';
+
+                setQuote(`"${quoteText}" - ${author}`);
                 setLoading(false);
             })
             .catch(() => {
@@ -28,6 +31,7 @@ const Quote = () => {
                 setError('Failed to fetch a new quote.');
             });
     };
+
 
     useEffect(() => {
         fetchQuote();
