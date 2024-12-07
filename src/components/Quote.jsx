@@ -11,7 +11,7 @@ const Quote = () => {
         setLoading(true);
         setError(null);
 
-        fetch('https://cors-anywhere.herokuapp.com/https://programming-quotes-api.vercel.app/api/random')
+        fetch('https://programming-quotesapi.vercel.app/api/random')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch quote');
