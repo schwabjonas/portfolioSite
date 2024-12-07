@@ -8,7 +8,7 @@
     "start": "vite",
     "build": "vite build",
     "predeploy": "vite build --base=/final-project-JONASSCHWAB3/",
-    "deploy": "gh-pages -d dist -b main",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
