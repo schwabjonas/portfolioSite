@@ -1,4 +1,6 @@
-/* Global Styles */
+/* =========================================
+   Global Styles
+========================================= */
 html,
 body {
     margin: 0;
@@ -10,11 +12,10 @@ body {
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
+    place-items: flex-start !important;
     padding-bottom: 60px;
 }
 
@@ -29,21 +30,10 @@ body {
     width: 100%;
 }
 
-header .container,
-footer .container {
-    width: 100%;
-    max-width: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 0;
-}
-
-/* Header */
+/* =========================================
+   Header Styles
+========================================= */
+/* Normal */
 header {
     display: flex;
     align-items: center;
@@ -54,31 +44,55 @@ header {
     top: 0;
     z-index: 1000;
     padding-right: 20px;
-    height: auto;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: height 0.5s ease-in-out;
+    height: 100px;
+    overflow: hidden;
 }
 
-.interactive-header {
+header .interactive-header {
     display: flex;
-    padding: 20px;
     width: 100%;
+    padding: 20px;
     justify-content: space-between;
 }
 
+header .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* State-Based */
+header.open {
+    height: 300px;
+}
+
+/* =========================================
+   Logo Styles
+========================================= */
+/* Normal */
 .logo-container {
-    margin: 0px;
+    margin: 0;
     display: flex;
+    height: inherit;
     align-items: center;
+    object-fit: contain;
     gap: 10px;
 }
 
 .logo {
     width: auto;
-    height: 100px;
+    height: inherit;
     object-fit: contain;
+    transition: height 0.5s ease-in-out;
 }
 
-/* Menu Button for Mobile */
+/* =========================================
+   Menu Button Styles
+========================================= */
+/* Normal */
 .menu-button {
     background: none;
     border: none;
@@ -92,57 +106,52 @@ header {
     gap: 5px;
 }
 
+button {
+    padding: 0;
+}
+
 button:hover {
     color: #f8d210;
-    outline: #212529
+    outline: #212529;
 }
 
 .menu-button:hover {
     color: #f8d210;
 }
 
-.menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #343a40;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-    display: none;
-    flex-direction: column;
-}
-
-.menu.open {
-    display: flex;
-}
-
+/* =========================================
+   Menu List Styles
+========================================= */
+/* Normal */
 .menu-list {
     list-style: none;
-    margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.menu-list li {
     margin: 0;
-}
-
-.menu-list a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+    background: #343a40;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .menu-list button {
     color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
     text-decoration: none;
-    font-size: 1rem;
     background-color: transparent;
-    outline: none !important;
+    padding: 0 10px;
+}
+
+/* State-Based */
+.menu-list.open {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    align-items: flex-start;
 }
 
 .menu-list button:hover,
@@ -155,15 +164,26 @@ button:hover {
     color: #f8d210;
 }
 
-button {
-    padding: 0px;
+.menu-list li.active button {
+    border-radius: 0;
+    border-left: 5px solid white;
 }
 
-/* Chat Button */
-.chat-button {
+/* =========================================
+   Chat Button Styles
+========================================= */
+/* Normal */
+.hire-me {
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hire-me:hover {
+    border-radius: 0px;
+    border: 5px solid white;
+    color: white;
 }
 
 .chat-icon {
@@ -181,13 +201,19 @@ button {
     border-radius: 5px;
     font-size: 1.5rem;
     font-weight: bold;
+    border: 5px solid transparent;
 }
 
-.hire-me:hover {
-    background: #ffe066;
+/* State-Based */
+.chat-button.hidden {
+    display: none;
+    transition: all 1s ease-in-out;
 }
 
-/* Footer */
+/* =========================================
+   Footer Styles
+========================================= */
+/* Normal */
 footer {
     position: fixed;
     bottom: 0;
@@ -207,9 +233,11 @@ footer p {
     font-weight: 300;
 }
 
+/* =========================================
+   Shared Button Styles
+========================================= */
 button,
 button:hover,
 button:focus {
     outline: none !important;
-    border-color: transparent;
 }

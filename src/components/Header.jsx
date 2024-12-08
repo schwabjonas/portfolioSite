@@ -4,7 +4,7 @@ import logo from '../assets/images/logo.png';
 import chatIcon from '../assets/icons/chat-icon.svg';
 
 
-const Header = ({ setCurrentPage }) => {
+const Header = ({ currentPage, setCurrentPage }) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -21,25 +21,23 @@ const Header = ({ setCurrentPage }) => {
     };
 
     return (
-        <header>
-            <div className="logo-container">
+        <header className={`header ${menuOpen ? 'open' : ''}`}>
+            <aside className="logo-container">
                 <img src={logo} alt="Website Logo" className="logo" />
-            </div>
+            </aside>
             <div className="interactive-header">
-                <button className="menu-button" onClick={toggleMenu}>
-                    <span className="menu-icon">❘</span> <span className="menu-label">MENU</span>
-                </button>
-                <nav className={`menu ${menuOpen ? 'open' : ''}`}>
-                    <ul className="menu-list">
-                        <li><button className="menu-link" onClick={() => handleNavigation('home')}>Home</button></li>
-                        <li><button className="menu-link" onClick={() => handleNavigation('portfolio')}>Portfolio</button></li>
-                        <li><a href="#art" onClick={closeMenu}>Art</a></li>
-                        <li><a href="#github" onClick={closeMenu}>GitHub</a></li>
+                <div className="menu-header">
+                    <button className="menu-button" onClick={toggleMenu}>
+                        <span className="menu-label">MENU</span>
+                    </button>
+                    <ul className={`menu-list ${menuOpen ? 'open' : ''}`}>
+                        <li className={currentPage === 'home' ? 'active' : ''}><button onClick={() => handleNavigation('home')}>HOME</button></li>
+                        <li className={currentPage === 'portfolio' ? 'active' : ''}><button onClick={() => handleNavigation('portfolio')}>PORTFOLIO</button></li>
                     </ul>
-                </nav>
-                <div className="chat-button">
-                    <img src={chatIcon} alt="Chat Icon" className="chat-icon" />
-                    <a href="#hire" className="hire-me">HIRE ME</a>
+
+                </div>
+                <div className={`chat-button ${menuOpen ? 'hidden' : ''}`}>
+                    <a href="#hire" className="hire-me"><img src={chatIcon} alt="Chat Icon" className="chat-icon" />HIRE ME</a>
                 </div>
             </div>
         </header>
