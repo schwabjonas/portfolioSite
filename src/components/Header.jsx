@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import '../assets/styles/HomePage.css';
+import '../assets/styles/global.css';
 import logo from '../assets/images/logo.png';
 import chatIcon from '../assets/icons/chat-icon.svg';
 
 
-const Header = () => {
+const Header = ({ setCurrentPage }) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -13,6 +13,11 @@ const Header = () => {
 
     const closeMenu = () => {
         setMenuOpen(false);
+    };
+
+    const handleNavigation = (page) => {
+        setCurrentPage(page);
+        closeMenu();
     };
 
     return (
@@ -26,7 +31,8 @@ const Header = () => {
                 </button>
                 <nav className={`menu ${menuOpen ? 'open' : ''}`}>
                     <ul className="menu-list">
-                        <li><a href="#portfolio" onClick={closeMenu}>Portfolio</a></li>
+                        <li><button className="menu-link" onClick={() => handleNavigation('home')}>Home</button></li>
+                        <li><button className="menu-link" onClick={() => handleNavigation('portfolio')}>Portfolio</button></li>
                         <li><a href="#art" onClick={closeMenu}>Art</a></li>
                         <li><a href="#github" onClick={closeMenu}>GitHub</a></li>
                     </ul>

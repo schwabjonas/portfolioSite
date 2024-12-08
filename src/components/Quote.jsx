@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../assets/styles/global.css';
 import '../assets/styles/HomePage.css';
 
 const Quote = () => {
@@ -13,6 +14,11 @@ const Quote = () => {
 
         fetch('https://programming-quotesapi.vercel.app/api/random')
             .then((response) => {
+                if (response.status === 429) {
+                    setError('Too Many Requests. Please wait before retrying.');
+                    setLoading(false);
+                    return;
+                }
                 if (!response.ok) {
                     throw new Error('Failed to fetch quote');
                 }
