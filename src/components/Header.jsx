@@ -30,6 +30,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                     <button className="menu-button" onClick={toggleMenu}>
                         <span className="menu-label">MENU</span>
                     </button>
+
                     <ul className={`menu-list ${menuOpen ? 'open' : ''}`}>
                         <li className={currentPage === 'home' ? 'active' : ''}><button onClick={() => handleNavigation('home')}>HOME</button></li>
                         <li className={currentPage === 'portfolio' ? 'active' : ''}><button onClick={() => handleNavigation('portfolio')}>PORTFOLIO</button></li>

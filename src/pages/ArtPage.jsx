@@ -58,7 +58,6 @@ const ArtPage = () => {
     };
 
     const startSlideshow = () => {
-        // If there's no current image selected, start from the first image
         if (!currentImage) {
             setCurrentImage(images[0]);
         }
@@ -77,7 +76,6 @@ const ArtPage = () => {
         }
     };
 
-    // Handle keyboard navigation and slideshow toggling
     useEffect(() => {
         const handleKeydown = (event) => {
             if (!overlayActive) return;
@@ -107,9 +105,7 @@ const ArtPage = () => {
         };
     }, [overlayActive, isPlaying, currentImage]);
 
-    // Slideshow effect
     useEffect(() => {
-        // Clear any existing interval when isPlaying changes
         if (slideshowInterval.current) {
             clearInterval(slideshowInterval.current);
         }
@@ -117,7 +113,7 @@ const ArtPage = () => {
         if (isPlaying && overlayActive && currentImage) {
             slideshowInterval.current = setInterval(() => {
                 nextImage();
-            }, 2000); // Set a reasonable interval time
+            }, 1000);
         }
 
         return () => {

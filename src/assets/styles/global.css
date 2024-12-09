@@ -14,6 +14,7 @@ body {
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f9f9f9;
+    margin-bottom: 50px;
     color: #333;
     line-height: 1.6;
     place-items: flex-start !important;
@@ -188,7 +189,10 @@ button:hover {
     color: white;
 }
 
-.chat-icon {
+.chat-icon,
+.insta-icon,
+.git-icon,
+.link-icon {
     width: 40px;
     height: 40px;
     margin-right: 8px;

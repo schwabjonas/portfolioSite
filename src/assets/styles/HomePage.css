@@ -3,8 +3,9 @@
     background: linear-gradient(to bottom, #343a40, #495057);
     color: white;
     text-align: center;
-    padding: 120px 20px;
+    padding: 80px 20px;
     border-bottom: 5px solid #f8d210;
+    padding-top: 150px;
 }
 
 #profile-img {
@@ -26,6 +27,7 @@
     font-size: 1.2rem;
     color: #f8f9fa;
     margin: 0;
+    margin-bottom: 20px;
 }
 
 /* Quote Section */
@@ -37,6 +39,7 @@
     border-radius: 10px;
     max-width: 700px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
 }
 
 #quote h3 {
@@ -62,6 +65,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
+    margin-bottom: 20px;
 }
 
 #quote button:hover {
