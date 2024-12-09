@@ -1,0 +1,33 @@
+/* Grid Layout for Portfolio Page */
+
+.portfolio-page {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    margin-right: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+
+/* Side Menu */
+.side-menu {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    position: fixed !important;
+    overflow-y: auto;
+}
+
+/* Portfolio Content */
+.portfolio-content {
+    margin-left: 173px;
+    margin-right: 123px;
+    padding: 20px;
+    overflow-y: auto;
+    padding-top: 100px;
+    overflow-y: auto;
+    margin-bottom: 50px;
+}

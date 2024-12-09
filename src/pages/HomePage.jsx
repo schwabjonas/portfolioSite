@@ -6,10 +6,10 @@ import Quote from '../components/Quote.jsx';
 
 const HomePage = () => {
     return (
-        <>
+        <main>
             <Hero />
             <Quote />
-        </>
+        </main>
     );
 };
 

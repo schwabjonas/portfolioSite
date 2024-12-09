@@ -33,6 +33,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                     <ul className={`menu-list ${menuOpen ? 'open' : ''}`}>
                         <li className={currentPage === 'home' ? 'active' : ''}><button onClick={() => handleNavigation('home')}>HOME</button></li>
                         <li className={currentPage === 'portfolio' ? 'active' : ''}><button onClick={() => handleNavigation('portfolio')}>PORTFOLIO</button></li>
+                        <li className={currentPage === 'art' ? 'active' : ''}><button onClick={() => handleNavigation('art')}>ART</button></li>
                     </ul>
 
                 </div>
