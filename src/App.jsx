@@ -5,6 +5,7 @@ import Footer from './components/Footer.jsx';
 import PortfolioPage from './pages/PortfolioPage.jsx';
 import HomePage from './pages/HomePage.jsx';
 import ArtPage from './pages/ArtPage.jsx';
+import TestPage from './pages/TestPage.jsx';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
@@ -16,6 +17,8 @@ const App = () => {
       return <PortfolioPage />;
     } else if (currentPage === 'art') {
       return <ArtPage />;
+    } else if (currentPage === 'test') {
+      return <TestPage />;
     }
   };
 
