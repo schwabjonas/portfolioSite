@@ -1,0 +1,261 @@
+.art-page {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.art-page .art-header {
+    background: linear-gradient(to bottom, #343a40, #495057);
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 120px 20px;
+    border-bottom: 5px solid #f8d210;
+    max-width: 100%;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.art-page .art-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.art-page .art-header p {
+    max-width: 1000px;
+
+}
+
+.art-page .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.art-page .gallery-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    transition: transform 0.3s, filter 0.3s;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.art-page .gallery-image:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.art-page .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    z-index: 1000;
+}
+
+.art-page .art-header {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #1c1212;
+    color: whitesmoke;
+    padding-top: 120px;
+}
+
+.art-page .art-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.art-page .art-header h3 {
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+.art-page .art-header p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.art-page .art-header a#instagram {
+    color: #f9f9f9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.art-page .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.art-page .gallery-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    transition: transform 0.3s, filter 0.3s;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.art-page .gallery-image:hover {
+    filter: grayscale(0%);
+    transform: scale(1.3);
+    z-index: 1;
+}
+
+.overlay a,
+.overlay i {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 2rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+img.overlay-image {
+    height: 90%;
+}
+
+.overlay a:hover,
+.overlay i:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.2);
+}
+
+#close {
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+}
+
+#previous {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#next {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.overlay button {
+    color: white;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.overlay button:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.overlay button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#close {
+    top: 20px;
+    right: 20px;
+}
+
+#previous {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#next {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#play,
+#pause {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+.overlay.playing #play {
+    display: none;
+}
+
+.overlay.playing #pause {
+    display: flex;
+}
+
+.overlay:hover #play,
+.overlay:hover #pause {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.overlay.playing button.center-button {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay:hover button.center-button {
+    opacity: 1;
+    pointer-events: auto;
+}

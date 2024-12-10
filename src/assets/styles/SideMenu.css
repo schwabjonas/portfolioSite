@@ -1,0 +1,83 @@
+.side-menu {
+    display: flex;
+    width: auto;
+    background-color: #343a40;
+    flex-direction: column;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 100px;
+}
+
+/* Collapsed Side Menu */
+.side-menu.collapsed {
+    padding: 20px;
+    width: auto;
+    padding-top: 100px;
+
+}
+
+/* Hide sections when collapsed */
+.side-menu.collapsed .menu-sections {
+    display: none;
+}
+
+.collapse-button.collapsed {
+    width: 40px;
+}
+
+.collapse-button:hover {
+    color: #f8d210;
+}
+
+.menu-sections {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-section {
+    margin-bottom: 20px;
+}
+
+.collapse-button,
+.section-title {
+    background: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    text-align: left;
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.section-title:hover {
+    color: #f8d210;
+}
+
+.submenu {
+    list-style: none;
+    padding: 0 0 0 20px;
+    margin: 10px 0;
+    display: none;
+}
+
+.submenu.open {
+    display: block;
+}
+
+.submenu-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 5px 0;
+    display: block;
+}
+
+.submenu-item a:hover {
+    color: #f8d210;
+}
