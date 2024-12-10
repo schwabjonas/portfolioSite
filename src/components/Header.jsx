@@ -35,7 +35,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                         <li className={currentPage === 'home' ? 'active' : ''}><button onClick={() => handleNavigation('home')}>HOME</button></li>
                         <li className={currentPage === 'portfolio' ? 'active' : ''}><button onClick={() => handleNavigation('portfolio')}>PORTFOLIO</button></li>
                         <li className={currentPage === 'art' ? 'active' : ''}><button onClick={() => handleNavigation('art')}>ART</button></li>
-                        <li className={currentPage === 'test' ? 'active' : ''}><button onClick={() => handleNavigation('test')}>Test</button></li>
+                        {/*<li className={currentPage === 'test' ? 'active' : ''}><button onClick={() => handleNavigation('test')}>Test</button></li>*/}
                     </ul>
 
                 </div>

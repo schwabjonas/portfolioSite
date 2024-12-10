@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './assets/styles/global.css';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
@@ -8,7 +8,14 @@ import ArtPage from './pages/ArtPage.jsx';
 import TestPage from './pages/TestPage.jsx';
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState(() => {
+    return localStorage.getItem('currentPage') || 'home';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('currentPage', currentPage);
+  }, [currentPage]);
+
 
   const renderContent = () => {
     if (currentPage === 'home') {
@@ -17,8 +24,6 @@ const App = () => {
       return <PortfolioPage />;
     } else if (currentPage === 'art') {
       return <ArtPage />;
-    } else if (currentPage === 'test') {
-      return <TestPage />;
     }
   };
 
