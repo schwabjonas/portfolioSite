@@ -15,7 +15,7 @@ const Hero = () => {
             <div className="hero-content">
                 {/*<img id="profile-img" src={profileImg} alt="Profile Picture" / >*/}
                 <Animation />
-                <h2>Hi, I'm Bonas Schwab</h2>
+                <h2>Hi, I'm Jonas Schwab</h2>
                 <p>A developer passionate about crafting great web experiences.</p>
                 <a
                     href="https://github.com/schwabjonas"
