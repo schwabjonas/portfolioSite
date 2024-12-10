@@ -9,6 +9,7 @@
     "build": "vite build",
     "predeploy": "vite build --base=/final-project-JONASSCHWAB3/",
     "deploy": "gh-pages -d dist",
+    "postbuild": "rm -rf docs && mv dist docs",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
