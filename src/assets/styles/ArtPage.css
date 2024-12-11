@@ -83,6 +83,10 @@
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+.gallery {
+    margin-bottom: 100px !important;
+}
+
 .art-page .art-header h3 {
     margin-top: 10px;
     font-weight: normal;

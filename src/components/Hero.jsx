@@ -20,18 +20,24 @@ const Hero = () => {
                 <a
                     href="https://github.com/schwabjonas"
                     id="github"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <img src={gitIcon} alt="Git Icon" className="git-icon" />
                 </a>
                 <a
                     href="https://www.instagram.com/plinthnabis/"
                     id="instagram"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <img src={instaIcon} alt="Insta Icon" className="insta-icon" />
                 </a>
                 <a
-                    href="www.linkedin.com/in/jonas-georg-schwab"
+                    href="https://www.linkedin.com/in/jonas-georg-schwab/"
                     id="linkedin"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <img src={linkIcon} alt="Link Icon" className="link-icon" />
                 </a>

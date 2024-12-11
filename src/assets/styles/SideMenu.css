@@ -1,6 +1,6 @@
 .side-menu {
     display: flex;
-    width: auto;
+    width: 300px;
     background-color: #343a40;
     flex-direction: column;
     color: white;
@@ -9,48 +9,60 @@
     height: 100vh;
     overflow-y: auto;
     padding-top: 100px;
+    transition: width 0.5s ease, padding 0.5s ease;
 }
 
-/* Collapsed Side Menu */
 .side-menu.collapsed {
     padding: 20px;
-    width: auto;
+    width: 49px;
     padding-top: 100px;
-
+    transition: width 0.5s ease, padding 0.5s ease;
 }
 
-/* Hide sections when collapsed */
 .side-menu.collapsed .menu-sections {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.collapse-button.collapsed {
-    width: 40px;
+.menu-sections {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.collapse-button {
+    font-size: 3rem !important;
+    margin-left: 20px;
+    margin-top: 20px;
+    transition: margin 0.5s ease;
 }
 
 .collapse-button:hover {
     color: #f8d210;
 }
 
-.menu-sections {
+.menu-sections,
+.collapse-button {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .menu-section {
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 .collapse-button,
 .section-title {
     background: none;
     color: white;
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: bold;
     border: none;
     text-align: left;
-    width: 100%;
     padding: 10px 0;
     cursor: pointer;
 }
@@ -80,4 +92,18 @@
 
 .submenu-item a:hover {
     color: #f8d210;
+}
+
+.collapse-button {
+    margin-left: 20px;
+    margin-top: 20px;
+    transition: margin 1s ease;
+}
+
+.collapse-button.collapsed {
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+    display: flex;
+    justify-content: center;
+    transition: margin 0.5s ease;
 }

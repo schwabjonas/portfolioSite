@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../assets/styles/global.css';
+import "../assets/styles/Port_Miscellaneous.css";
 
 
 const Port_Home = () => {
@@ -48,11 +49,9 @@ const Port_Home = () => {
                 </ul>
             </section>
 
-            <footer className="work-footer">
-                <p>
-                    No matter the project, I believe in crafting solutions that are as functional as they are beautiful. Let’s build something amazing together.
-                </p>
-            </footer>
+            <p>
+                No matter the project, I believe in crafting solutions that are as functional as they are beautiful. Let’s build something amazing together.
+            </p>
         </div>
     );
 };

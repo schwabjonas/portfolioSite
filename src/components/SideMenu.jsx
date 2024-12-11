@@ -3,7 +3,7 @@ import '../assets/styles/SideMenu.css';
 
 const SideMenu = ({ sections, setCurrentSection }) => {
     const [openSections, setOpenSections] = useState({});
-    const [isCollapsed, setIsCollapsed] = useState(false);
+    const [isCollapsed, setIsCollapsed] = useState(true);
 
     const toggleCollapse = () => {
         setIsCollapsed(!isCollapsed);
@@ -16,9 +16,17 @@ const SideMenu = ({ sections, setCurrentSection }) => {
         }));
     };
 
+    const handleTitleClick = (title) => {
+        setCurrentSection(title);
+        setIsCollapsed(true);
+    };
+
     return (
         <aside className={`side-menu ${isCollapsed ? 'collapsed' : ''}`}>
-            <button className="collapse-button" onClick={toggleCollapse}>
+            <button
+                className={`collapse-button ${isCollapsed ? 'collapsed' : ''}`}
+                onClick={toggleCollapse}
+            >
                 {isCollapsed ? '≡' : '≡'}
             </button>
             {!isCollapsed && (
@@ -27,10 +35,7 @@ const SideMenu = ({ sections, setCurrentSection }) => {
                         <li key={section.title} className="menu-section">
                             <button
                                 className="section-title"
-                                onClick={() => {
-                                    toggleSection(section.title);
-                                    setCurrentSection(section.title); // Update current section
-                                }}
+                                onClick={() => handleTitleClick(section.title)}
                             >
                                 {section.title}
                             </button>
