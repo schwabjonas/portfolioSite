@@ -40,10 +40,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
 
                 </div>
                 <div className={`chat-button ${menuOpen ? 'hidden' : ''}`}>
-                    <a class="hire-me"> {/*</div>*href="mailto:jonas.g.schwab@gmail.com?subject=Hi Jonas, I’d like to hire you"*/}
-                        <img src={chatIcon} alt="Chat Icon" className="chat-icon" />
-                        HIRE ME
-                    </a>
+                    <a href="#hire" className="hire-me"><img src={chatIcon} alt="Chat Icon" className="chat-icon" />HIRE ME</a>
                 </div>
             </div>
         </header>
