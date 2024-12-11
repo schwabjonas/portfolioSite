@@ -41,7 +41,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                 </div>
                 <div className={`chat-button ${menuOpen ? 'hidden' : ''}`}>
                     <a
-                        href="mailto:jonas.g.schwab@gmail.com?subject=Job%20Opportunity"
+                        href="mailto:jonas.g.schwab@gmail.com?subject=Job%20Opportunity&body=Hi%20Jonas,%0D%0A%0D%0AI%20am%20interested%20in%20discussing%20a%20job%20opportunity%20with%20you.%0D%0A%0D%0ARegards,%0D%0A[Your%20Name]"
                         className="hire-me"
                     >
                         <img src={chatIcon} alt="Chat Icon" className="chat-icon" />
