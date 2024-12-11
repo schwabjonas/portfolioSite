@@ -33,16 +33,16 @@ const Hero = () => {
                 >
                     <img src={instaIcon} alt="Insta Icon" className="insta-icon" />
                 </a>
-                <a
+                {/*<a
                     href="https://www.linkedin.com/in/jonas-georg-schwab/"
                     id="linkedin"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <img src={linkIcon} alt="Link Icon" className="link-icon" />
-                </a>
+                <img src={linkIcon} alt="Link Icon" className="link-icon" />
+            </a>*/}
             </div>
-        </section>
+        </section >
     );
 };
 
