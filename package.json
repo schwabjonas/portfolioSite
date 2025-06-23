@@ -9,7 +9,6 @@
     "build": "vite build",
     "predeploy": "vite build --base=/final-project-JONASSCHWAB3/",
     "deploy": "gh-pages -d dist",
-    "postbuild": "rm -rf docs && mv dist docs",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -26,6 +25,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "gh-pages": "^6.2.0",
-    "vite": "^4.5.5"
+    "vite": "^4.5.14"
   }
 }
